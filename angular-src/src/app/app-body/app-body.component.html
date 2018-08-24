@@ -1,0 +1,83 @@
+<!-- <app-add-restaurant (addRestaurant)='onAddRestaurant($event)'></app-add-restaurant> -->
+<!-- <button type="button" class="btn btn-primary" routerLink="/add">Add New Restaurant</button> -->
+<!-- <router-outlet></router-outlet> -->
+<!-- <ul class="list-group" *ngFor="let restaurant of restaurants">
+  <li>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="panel-img">
+          <img src="...">
+        </div>
+        <div class="panel-info">
+          <h4>{{restaurant.name}}</h4>
+          <p>{{restaurant.address}}</p>
+          <p>{{restaurant.description}}</p>
+        </div>
+        <div class="panel-btn">
+          <p>Edit</p>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul> -->
+
+<!-- <div class="container" *ngFor="let restaurant of restaurants">
+  <div class="row">
+    <div class="col col-md-4 col-img">
+        <img class="restaurant-img" src="{{restaurant.imageUrl}}">
+    </div>
+    <div class="col col-md-6 col-info">
+        <h4>{{restaurant.name}}</h4>
+        <p>{{restaurant.address}}</p>
+        <p>{{restaurant.description}}</p>
+    </div>
+    <div class="col col-md-2 col-btn">
+        <button type="button" class="btn btn-success">Edit</button>
+        <button type="button" class="btn btn-danger" (click)="deleteRestaurant(restaurant);">Delete</button>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="col-md-12">
+    <div>
+      <span class="title">
+        <h1>Restaurant List</h1>
+      </span>
+      <span class="add-btn">
+        <button class="btn btn-success" routerLink="/add">Add Restaurant</button>
+      </span>
+    </div>
+    <table class="table table-bordered table-striped-table-hover">
+      <thead>
+        <tr>
+          <th class="text-center">Name</th>
+          <th class="text-center">Detail</th>
+          <th class="text-center">Button</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let restaurant of restaurants">
+          <td>
+            <div class="container img-container">
+              <img class="restaurant-img" src="{{restaurant.imageUrl}}">
+            </div>
+          </td>
+          <td class="detail">
+            <h5>{{restaurant.name}}</h5>
+            <p class="description">{{restaurant.description}}</p>
+            <p>{{restaurant.address}}</p>
+          </td>
+          <td>
+            <button class="btn btn-info" routerLink="/edit/{{restaurant._id}}">
+              <i class="fa fa-edit"></i>
+            </button>
+            <button class="btn btn-danger" (click)="deleteRestaurant(restaurant);">
+              <i class="fa fa-minus"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

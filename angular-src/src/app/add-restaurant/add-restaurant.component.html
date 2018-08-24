@@ -1,0 +1,35 @@
+<!-- <div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" [(ngModel)]="newRestaurant.name" name="name" required>
+    </div>
+    <div>
+      <label for="address">Address</label>
+      <input type="text" [(ngModel)]="newRestaurant.address" name="address" required>
+    </div>
+    <div>
+      <label for="address">Description</label>
+      <input type="text" [(ngModel)]="newRestaurant.description" name="description">
+    </div>
+    <div>
+      <label for="reviews">Reviews</label>
+      <input type="text" [(ngModel)]="newRestaurant.reviews" name="reviews">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div> -->
+<div class="form">
+  <form (ngSubmit)="onSubmit()">
+    <h2>Restaurant Information</h2>
+    <p>Name:<input type="text" [(ngModel)]="newRestaurant.name" name="name" required></p>
+    <p>Description:<input type="text" [(ngModel)]="newRestaurant.description" name="description"></p>
+    <p>Address:<input type="text" [(ngModel)]="newRestaurant.address" name="address" required></p>
+    <p>Reviews:<input type="text" [(ngModel)]="newRestaurant.reviews" name="reviews"></p>
+    <p>Image Link:<input type="text" [(ngModel)]="newRestaurant.imageUrl" name="imageUrl"></p>
+    <p>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-warning" routerLink="/restaurants">Cancel</button>
+    </p>
+  </form>
+</div>
